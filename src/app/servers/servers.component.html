@@ -1,5 +1,8 @@
 <label>Server Name</label>
+<!-- The following line creates an input text form that upon running it executes a function from inside the class -->
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!-- To create a two-way binding communication, we use the ngModel from the FormsModule -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
 <p> {{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
   Add Server
